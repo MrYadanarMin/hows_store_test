@@ -10,6 +10,6 @@ class Unit extends Model
 
     public function items(): HasMany
     {
-        return $this->hasMany(Item::class);
+        return $this->hasMany(Ware::class);
     }
 }
