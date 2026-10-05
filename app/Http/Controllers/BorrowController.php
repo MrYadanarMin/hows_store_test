@@ -12,6 +12,7 @@ class BorrowController extends Controller
     {
         $borrows = Borrow::with(['partner', 'items'])->latest()->get();
         return view('borrows.index', compact('borrows'));
+        //return $borrows;
     }
 
     public function create()

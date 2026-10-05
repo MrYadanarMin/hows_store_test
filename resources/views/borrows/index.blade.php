@@ -23,7 +23,7 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse($borrows as $borrow)
+                @foreach($borrows as $borrow)
                     <tr>
                         <td>{{ $borrow->id }}</td>
                         <td>{{ $borrow->partner->name }}</td>

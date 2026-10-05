@@ -12,7 +12,7 @@
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul class="mb-0">
-                            @foreach ($errors->all() as$error)
+                            @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
                             @endforeach
                         </ul>
@@ -27,7 +27,7 @@
                             <label for="partner_id" class="form-label">Partner Catering</label>
                             <select name="partner_id" id="partner_id" class="form-select" required>
                                 <option value="">-- Select Partner --</option>
-                                @foreach($partners as$partner)
+                                @foreach($partners as $partner)
                                     <option value="{{ $partner->id }}" {{ old('partner_id') == $partner->id ? 'selected' : '' }}>
                                         {{ $partner->name }}
                                     </option>
@@ -67,7 +67,7 @@
                             <div class="col-md-7">
                                 <select name="items[0][item_id]" class="form-select" required>
                                     <option value="">-- Select Item --</option>
-                                    @foreach($items as$item)
+                                    @foreach($items as $item)
                                         <option value="{{ $item->id }}">{{ $item->name }}</option>
                                     @endforeach
                                 </select>
@@ -122,4 +122,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+@endsection
 @endsection

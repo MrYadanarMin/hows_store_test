@@ -1,0 +1,12 @@
+<?php
+
+use App\Http\Controllers\ApiTestingController;
+
+// Redirect root URL to apitest1
+Route::get('/', function () {
+    return redirect()->route('apitest.apitest1');
+});
+
+// Explicit custom routes matching your controller methods
+Route::get('/apitest1', [ApiTestingController::class, 'apitest1'])->name('apitest.apitest1');
+Route::get('/apitest2', [ApiTestingController::class, 'apitest2'])->name('apitest.apitest2');
